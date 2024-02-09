@@ -82,11 +82,11 @@ Replace the contents of the first `<tabViewItem>` with:
 <gridLayout columns="*,120" rows="70,*">
     <!-- Configures the text field and ensures that pressing Return on the keyboard
         produces the same result as tapping the button. -->
-    <textField col="0" row="0" bind:text="{textFieldValue}" hint="Type new task..." editable="true"
+    <textField col={0} row={0} bind:text="{textFieldValue}" hint="Type new task..." editable="true"
         on:returnPress="{onButtonTap}" />
-    <button col="1" row="0" text="Add task" on:tap="{onButtonTap}" />
+    <button col={1} row={0} text="Add task" on:tap="{onButtonTap}" />
 
-    <listView items="{todos}" on:itemTap="{onItemTap}" row="1" colSpan="2">
+    <listView items="{todos}" on:itemTap="{onItemTap}" row={1} colSpan="2">
         <Template let:item>
             <label text="{item.name}" textWrap="true" />
         </Template>
@@ -233,7 +233,7 @@ The basic functionality of the todo app is complete. But it could do with a litt
 The [NativeScript core theme](https://www.nativescript.org/blog/an-early-look-at-the-new-nativescript-core-theme) does a great job of default styling our application but we want to increase the importance of our button. We can do this by applying the `-primary` class to the button.
 
 ```html
- <button col="1" row="0" text="Add task" on:tap="{onButtonTap}" class="-primary" />
+ <button col={1} row={0} text="Add task" on:tap="{onButtonTap}" class="-primary" />
 ```
 
 Our input text should also be more emphasised. At the bottom of `Home.svelte` add the following style tag:
